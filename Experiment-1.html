@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        /* ---------- GLOBAL STYLES ---------- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff7edb;
+            margin-top: 20px;
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* ---------- PROFILE IMAGE ---------- */
+        img {
+            width: 220px;
+            height: 220px;
+       
+            margin-top: 20px;
+            border: 6px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.08);
+            border-color: #ff7edb;
+        }
+
+        /* ---------- SKILLS ---------- */
+        ul.list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.list li {
+            background: rgba(255, 255, 255, 0.2);
+            margin: 10px auto;
+            padding: 12px;
+            width: 200px;
+            border-radius: 12px;
+            font-size: 20px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: background 0.3s ease, transform 0.3s;
+        }
+
+        ul.list li:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateX(8px);
+        }
+
+        /* ---------- CONTACT CARD ---------- */
+        .contact {
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            color: black;
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+        }
+
+        .contact h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .contact a {
+            color: #1f1c2c;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #ff3ea5;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h1>Welcome to My Portfolio</h1>
+    <hr style="width: 80%; border: 1px solid #ffffff50;">
+
+    <!-- Profile Image -->
+    <img src="munna.jpg" alt="Profile Photo">
+
+    <!-- Description -->
+    <p>
+        I’m a passionate developer who loves crafting clean, user-friendly websites and applications.  
+        I constantly explore new technologies and enjoy solving problems with creative solutions.  
+        My goal is to build digital experiences that truly make an impact.
+    </p>
+
+    <!-- Skills Section -->
+    <h1 style="color:#ffd1f3;">My Skills</h1>
+
+    <ul class="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Responsive Design</li>
+        <li>Problem Solving</li>
+    </ul>
+
+    <!-- Contact Card -->
+    <div class="contact">
+        <h2>📞 Contact Me</h2>
+
+        <p><b>Phone: </b>
+        <a href="tel:9618124443">9618124443</a></p>
+
+        <p><b>Email: </b>
+        <a href="mailto:kolaventisriharsha@gmail.com">kolaventisriharsha@gmail.com</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+
+    <style>
+        /* -------- Global Layout -------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: lightblue;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 450px;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            border-left: 6px solid #4a5bd9;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        /* -------- Form Styling -------- */
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        input,
+        select {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        
+        input:focus,
+        select:focus {
+            border-color: #4a5bd9;
+            background: #eef0ff;
+        }
+
+       
+        ::placeholder {
+            color: #999;
+        }
+
+      
+        input:required {
+            border-left: 4px solid #ff7b7b;
+        }
+
+       
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        
+        button {
+            background: #4a5bd9;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #3544ad;
+        }
+
+        /* Optional message style */
+        .note::before {
+            content: "ℹ️ ";
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Registration Form</h2>
+
+        <form>
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="form-group">
+                <label for="event">Choose Event</label>
+                <select id="event">
+                    <option>Music Festival</option>
+                    <option>Workshop</option>
+                    <option>Sports Meetup</option>
+                    <option>Community Talk</option>
+                </select>
+            </div>
+
+            <!-- Preferences (Checkboxes) -->
+            <div class="form-group">
+                <label>Preferences</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Receive Event Updates</label>
+                    <label><input type="checkbox"> Workshop Materials</label>
+                    <label><input type="checkbox"> Free Snacks</label>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button type="submit">Register Now</button>
+
+            <p class="note" style="font-size: 13px; color: #666;">Your information is safe with us.</p>
+        </form>
+    </div>
+
+</body>
+</html>
