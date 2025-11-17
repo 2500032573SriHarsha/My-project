@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Themed Layout with SCSS and Custom Properties</title>
+
+  <!-- 🎨 Internal CSS -->
+  <style>
+    :root {
+      /* Light Theme Colors */
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --header-bg: #e0f7fa;
+      --button-bg: #00897b;
+      --button-text: #fff;
+      --footer-bg: #e0e0e0;
+    }
+
+    body.dark-theme {
+      /* Dark Theme Overrides */
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --header-bg: #263238;
+      --button-bg: #00bfa5;
+      --button-text: #000;
+      --footer-bg: #1e1e1e;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Poppins", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #b2ebf2;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    #themeToggle {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--text-color);
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text-color);
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #b2ebf2;
+      color: var(--text-color);
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Theme Switcher</h1>
+    <button id="themeToggle">Switch Theme</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>This layout uses SCSS and CSS custom properties for light and dark themes. Click the button above to switch between them.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Startup Inc.</p>
+  </footer>
+
+  <script>
+    // 🌗 Theme Toggle Logic
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+</body>
+</html>
